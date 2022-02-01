@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulario</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <script src='scripts/main.js'></script>
+    <div class="nav">
+        <img src="assets/logo.jpg" alt="Logo">
+        <ul class="nav-li">
+            <li class="seleccionado link">Formulario</li>
+            <li><a class="item-menu link" href="./listado/vehiculos.html">Lista formulario</a></li>
+        </ul>
+    </div>
+</head>
+<body>
+    <div class="form">
+        <div>
+            <h2>Nuevo formulario</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+        <div class="container">
+            <h4 class="titulo">Datos del vendedor: </h4>
+            <div class="input-row">
+                <div class="span-input input-w-80">
+                    <span>Nombres y apellidos</span>
+                    <input type="text" name="nombre" id="nombreVendedor">
+                    <span class="error" id="errorNombreVendedor"></span>
+                </div>
+                <div class="span-input input-w-20">
+                    <span>Rut del vendedor</span>
+                    <input type="text" name="rut" id="rutVendedor">
+                    <span class="error" id="errorRutVendedor"></span>
+                </div>   
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h4 class="titulo">Datos del vehiculo: </h4>
+            <div class="input-row">
+                <div class="span-input input-w-30">
+                    <span>Patente vehiculo</span>
+                    <input type="text" name="patente" id="patenteVehiculo">
+                    <span class="error" id="errorPatenteVehiculo"></span>
+                </div>
+                <div class="span-input input-w-30">
+                    <span>Marca vehiculo</span>
+                    <select onchange="cargarModelos(this)" name="marcaVehiculo" id="marcaVehiculo"></select>
+                    <span class="error" id="errorMarcaVehiculo"></span>
+                </div>
+                <div class="span-input input-w-30">
+                    <span>Modelo vehiculo</span>
+                    <select name="modeloVehiculo" id="modeloVehiculo"></select>
+                    <span class="error" id="errorModeloVehiculo"></span>
+                </div>   
+                <div class="span-input input-w-30">
+                    <span>Color vehiculo</span>
+                    <select name="colorVehiculo" id="colorVehiculo"></select>
+                    <span class="error" id="errorColorVehiculo"></span>
+                </div>   
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="cargoNuevoVehiculo()" class="button-send">Enviar</button>
+        </div>
+    </div>
+</body>
+<script src='index.js'></script>
+</html>
